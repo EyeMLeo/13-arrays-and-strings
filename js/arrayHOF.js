@@ -1,5 +1,5 @@
-'use strict';
-console.log('arrayHOF.js');
+"use strict";
+console.log("arrayHOF.js");
 
 const numArray = [5, 15, -2, 0, -5, 7];
 
@@ -31,7 +31,7 @@ function printPositiveNumbers(sk) {
 }
 
 let kazkas = numArray.forEach(printPositiveNumbers);
-console.log('kazkas ===', kazkas);
+console.log("kazkas ===", kazkas);
 
 // atrinkti i nauja masyva visus teigiamus
 const positives = [];
@@ -41,7 +41,7 @@ numArray.forEach((sk) => {
   }
 });
 
-console.log('positives ===', positives);
+console.log("positives ===", positives);
 
 // paversti masyvo neigiamus skaiciu teigiamais
 
@@ -49,18 +49,27 @@ numArray.forEach((sk, i, arr) => {
   // jei sk neigiamas
   if (sk < 0) {
     // padauginti is -1
-    console.log('sk * -1 ===', sk * -1);
+    console.log("sk * -1 ===", sk * -1);
     // irasyti reiksme i masyvo orginala
     arr[i] = sk * -1;
   } else {
-    console.log('sk', sk);
+    console.log("sk", sk);
   }
 });
-console.log('numArray ===', numArray);
+console.log("numArray ===", numArray);
 
 // paskaiciuoti numArray masyvo vidurki
 
-let str1 = 'Brown fox jumped over the lazy dog.';
-str1.split(' ').forEach((word, i, arr) => {
-  console.log('word ===', word);
+let str1 = "Brown fox jumped over the lazy dog.";
+str1.split(" ").forEach((word, i, arr) => {
+  console.log("word ===", word);
 });
+
+let sum = 0;
+numArray.forEach((sk, i, arr) => {
+  sum += sk;
+  console.log(sum);
+});
+console.log("sum ===", sum);
+let average = sum / numArray.length;
+console.log("average ===", average);
